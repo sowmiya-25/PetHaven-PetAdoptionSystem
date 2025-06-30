@@ -1,80 +1,47 @@
 package com.example.PetAdoptionSystem.model;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 
 @Entity
 public class AdoptionRequest {
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int id ;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-    private  String requestDate;
+    private LocalDate requestDate;
     private String status;
-    
-    @ManyToOne
-    @JoinColumn(name="user_id")
-    private User user;
+    private int userId;
+    private int petId;
 
-    @ManyToOne
-    @JoinColumn(name="pet_id")
-    private Pet pet;
+    public AdoptionRequest() {}
 
-    public AdoptionRequest() {
-    }
-
-    public AdoptionRequest(int id, String requestDate, String status, User user, Pet pet) {
+    public AdoptionRequest(int id, LocalDate requestDate, String status, int userId, int petId) {
         this.id = id;
         this.requestDate = requestDate;
         this.status = status;
-        this.user = user;
-        this.pet = pet;
+        this.userId = userId;
+        this.petId = petId;
     }
 
-    public int getId() {
-        return id;
-    }
+    // Getters & Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public LocalDate getRequestDate() { return requestDate; }
+    public void setRequestDate(LocalDate requestDate) { this.requestDate = requestDate; }
 
-    public String getRequestDate() {
-        return requestDate;
-    }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 
-    public void setRequestDate(String requestDate) {
-        this.requestDate = requestDate;
-    }
+    public int getUserId() { return userId; }
+    public void setUserId(int userId) { this.userId = userId; }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Pet getPet() {
-        return pet;
-    }
-
-    public void setPet(Pet pet) {
-        this.pet = pet;
-    }
-
-
-
+    public int getPetId() { return petId; }
+    public void setPetId(int petId) { this.petId = petId; }
 }

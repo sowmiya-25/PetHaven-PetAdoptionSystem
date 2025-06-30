@@ -10,25 +10,24 @@ import com.example.PetAdoptionSystem.repository.Petrepo;
 
 @Service
 public class PetService {
-    
-      @Autowired
-    Petrepo petrepo ;
 
-    public List<Pet>  getallpets(){
+    @Autowired
+    Petrepo petrepo;
+
+    public List<Pet> getAllPets() {
         return petrepo.findAll();
     }
 
-    public Pet addnewpet(Pet pet){
-        
-        return petrepo.save(pet);
+    public void addNewPet(Pet pet) {
+        petrepo.save(pet);
     }
 
-     public Pet getpetbyId( int id){
-        return petrepo.findById(id).orElseThrow(()-> new RuntimeException("Pet not found with is "+id));
-     }
+    public Pet getPetById(int id) {
+        return petrepo.findById(id).orElseThrow(() -> new RuntimeException("Pet not found with id: " + id));
+    }
 
-     public Pet updatePet(Pet updatedPet , int id ){
-        Pet pet = petrepo.findById(id).orElseThrow(()-> new RuntimeException("Pet not found with is "+id));
+    public Pet updatePet(Pet updatedPet, int id) {
+        Pet pet = petrepo.findById(id).orElseThrow(() -> new RuntimeException("Pet not found with id: " + id));
         pet.setAge(updatedPet.getAge());
         pet.setName(updatedPet.getName());
         pet.setBreed(updatedPet.getBreed());
@@ -37,11 +36,10 @@ public class PetService {
         pet.setImageUrl(updatedPet.getImageUrl());
         pet.setType(updatedPet.getType());
         return petrepo.save(pet);
+    }
 
-        
-     }
-
-     public  void deletepet(int id ){
+    public void deletePetById(int id) {
         petrepo.deleteById(id);
-     }
+    }
+
 }
