@@ -1,0 +1,79 @@
+.adoption-table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  border-collapse: collapse;
+}
+
+.adoption-table th, .adoption-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+.adoption-table th {
+  background-color: #f2f2f2;
+}
+
+.adoption-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.profile-page {
+  padding: 40px;
+  text-align: center;
+}
+
+.profile-card {
+  background: #f9f9f9;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+.adoption-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.adoption-list li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.adopted-pets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.adopted-pet-card {
+  width: 150px;
+  text-align: center;
+}
+
+.adopted-pet-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.logout-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #e60026;
+}

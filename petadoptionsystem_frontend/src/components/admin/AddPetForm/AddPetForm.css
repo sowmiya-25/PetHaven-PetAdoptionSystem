@@ -1,0 +1,60 @@
+.addpet-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.addpet-box {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  width: 400px;
+  text-align: center;
+}
+
+.addpet-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.addpet-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.addpet-form input,
+.addpet-form select,
+.addpet-form textarea {
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.addpet-form input:focus,
+.addpet-form select:focus,
+.addpet-form textarea:focus {
+  border-color: #ff6b6b;
+  outline: none;
+}
+
+.addpet-form button {
+  padding: 12px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.addpet-form button:hover {
+  background-color: #e24e4e;
+}
+
